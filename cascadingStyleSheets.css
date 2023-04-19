@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'android';
+    src: url('./fonte/idroid.otf')format('opentype');
+}
+body{
+    font-family: 'android';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+section{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 1rem;
+}
+#modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.86);
+    display: none;
+}   
+.card{
+    text-align: center;
+    width: 260px;
+    padding-top: 8px;
+    background-color: rgba(128, 128, 128, 0.555);
+    border: 1px solid black;
+    border-radius: 18px;
+}
+#caixa{
+    position: relative;
+}
+#modalConteudo{
+    text-align: center;
+    width: 800px;
+    height: 400px;
+    margin-top: 120px;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+    overflow: scroll;
+}
+.uls{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 50px;
+    
+}
+li{
+    border-bottom: 1px solid gray;
+    margin-bottom: 6px;
+    
+}
+.ok{
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+    background-color:rgba(0, 0, 0, 0);
+}
+h2{
+    font-style: italic;
+    margin-top: 40px;
+    text-shadow: 1px 1px 8px gold;
+    background-color: rgba(128, 128, 128, 0.274);
+}
+h3{
+  font-size: 1.3rem;
+}
+.titulo{
+    color: rgb(13, 30, 85);
+    text-align: center;
+}
+button{
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100px;
+    background-color: rgba(0, 0, 255, 0.514);
+    color: white;
+}
+img{
+    width: 220px;  
+    object-fit: cover; 
+    -webkit-transition: all 0.5s ease-in;
+}
+img:hover{
+    -webkit-transform: scale(1.4);
+}
+.animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.spinner{
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(66, 66, 66, 0.56);
+    border-left-color: rgb(3, 72, 72);
+    border-right-color:rgb(131, 94, 0);
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px rgb(86, 86, 86);
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    to { transform: rotate(360deg); }
+}
